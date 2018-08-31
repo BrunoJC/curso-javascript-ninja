@@ -2,7 +2,8 @@
 
 ```js
 // Declarar uma variável qualquer, que receba um objeto vazio.
-?
+
+var pessoa = {};
 
 /*
 Declarar uma variável `pessoa`, que receba suas informações pessoais.
@@ -15,17 +16,16 @@ As propriedades e tipos de valores para cada propriedade desse objeto devem ser:
 - `peso` - Number
 - `andando` - Boolean - recebe "falso" por padrão
 - `caminhouQuantosMetros` - Number - recebe "zero" por padrão
-*/
-?
+var pessoa = {nome: 'bruno', sobrenome: 'costa', sexo:'masculino', idade: 22, altura:1.78, peso:80, anadando: true, caminhouquantosmetros: 0}
 
-/*
 Adicione um método ao objeto `pessoa` chamado `fazerAniversario`. O método deve
 alterar o valor da propriedade `idade` dessa pessoa, somando `1` a cada vez que
 for chamado.
-*/
-?
 
-/*
+pessoa.fazeraniversario = function () {
+    return pessoa.idade++;}
+    
+    
 Adicione um método ao objeto `pessoa` chamado `andar`, que terá as seguintes
 características:
 - Esse método deve receber por parâmetro um valor que representará a quantidade
@@ -34,32 +34,40 @@ de metros caminhados;
 valor dessa propriedade a quantidade passada por parâmetro;
 - Ele deverá modificar o valor da propriedade `andando` para o valor
 booleano que representa "verdadeiro";
-*/
-?
+
+ pessoa.andar = function ( num1 ){
+    return pessoa.andando = true;
+... return pessoa.caminhoquantosmetros + num1 + ' metros ' +  pessoa.andando;
+... }
 
 /*
 Adicione um método ao objeto `pessoa` chamado `parar`, que irá modificar o valor
 da propriedade `andando` para o valor booleano que representa "falso".
-*/
-?
+
+pessoa.parar = function ( num1 ){
+... return pessoa.andando = false;
+... }
 
 /*
 Crie um método chamado `nomeCompleto`, que retorne a frase:
 - "Olá! Meu nome é [NOME] [SOBRENOME]!"
-*/
-?
+
+pessoa.nomecompleto = function () {
+... return "Olá, meu nome é  " + pessoa.nome + pessoa.sobrenome;
+... }
 
 /*
 Crie um método chamado `mostrarIdade`, que retorne a frase:
 - "Olá, eu tenho [IDADE] anos!"
-*/
-?
+
+
+pessoa.mostraridade2 = function () {
+... return "olá eu tenho " +pessoa.idade + "anos";}
 
 /*
 Crie um método chamado `mostrarPeso`, que retorne a frase:
-- "Eu peso [PESO]Kg."
-*/
-?
+
+
 
 /*
 Crie um método chamado `mostrarAltura` que retorne a frase:
